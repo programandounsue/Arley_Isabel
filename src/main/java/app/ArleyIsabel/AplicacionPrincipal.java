@@ -22,11 +22,11 @@ public class AplicacionPrincipal {
     }
 
     private void initializeUI() {
-        // Crear el marco principal
+        // marco principal
         JFrame frame = new JFrame("Aplicacion Arley_Isabel_Aprendis Sena");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600, 400);  // Ajustar el tamaño para que sea más visible
-        frame.setLocationRelativeTo(null);  // Centramos la ventana en la pantalla
+        frame.setLocationRelativeTo(null);  // Centrar la ventana en la pantalla
 
         // Crear botones
         JButton btnInsertar = new JButton("Insertar Usuario");
@@ -38,7 +38,7 @@ public class AplicacionPrincipal {
         btnInsertar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Código para insertar un usuario
+                //insertar un usuario
                 Usuario usuario = new Usuario(0, "Arley_Torres_isabel", "arleyIsabel@correo.com");
                 usuarioDAO.insertarUsuario(usuario);
                 JOptionPane.showMessageDialog(frame, "Usuario insertado.");
@@ -48,7 +48,7 @@ public class AplicacionPrincipal {
         btnConsultar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Código para consultar usuarios
+                //consultar usuarios
                 String usuarios = usuarioDAO.consultarUsuarios();
                 JOptionPane.showMessageDialog(frame, usuarios);
             }
@@ -57,7 +57,7 @@ public class AplicacionPrincipal {
         btnActualizar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Código para actualizar un usuario
+                //actualizar un usuario
                 Usuario usuario = new Usuario(1, "ArleyIsabel Actualizado", "arleyIsabel@hotmail.com.com");
                 usuarioDAO.actualizarUsuario(usuario);
                 JOptionPane.showMessageDialog(frame, "Usuario actualizado.");
@@ -67,13 +67,13 @@ public class AplicacionPrincipal {
         btnEliminar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Código para eliminar un usuario
+                //eliminar un usuario
                 usuarioDAO.eliminarUsuario(1);
                 JOptionPane.showMessageDialog(frame, "Usuario eliminado.");
             }
         });
 
-        // Crear un panel y agregar los botones
+        // Crear un panel
         JPanel panel = new JPanel();
         panel.add(btnInsertar);
         panel.add(btnConsultar);
@@ -83,11 +83,11 @@ public class AplicacionPrincipal {
         // Agregar el panel al contenido del frame
         frame.getContentPane().add(panel);
 
-        // Asegurarse de que la interfaz gráfica se actualice correctamente
+        // interfaz gráfica 
         frame.revalidate();
         frame.repaint();
 
-        // Hacer visible la ventana
+        //ventana
         frame.setVisible(true);
     }
 
