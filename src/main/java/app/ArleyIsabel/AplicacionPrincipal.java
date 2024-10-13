@@ -39,7 +39,7 @@ public class AplicacionPrincipal {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Código para insertar un usuario
-                Usuario usuario = new Usuario(0, "Arley Torres", "arleyIsabel@correo.com");
+                Usuario usuario = new Usuario(0, "Arley_Torres_isabel", "arleyIsabel@correo.com");
                 usuarioDAO.insertarUsuario(usuario);
                 JOptionPane.showMessageDialog(frame, "Usuario insertado.");
             }
